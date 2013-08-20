@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>User Info Form</title>
+</head>
+
+<body>
+<h1>Input Information Below</h1>
+<form name="userinfo" method="post" action="verify.php">
+Name: <input type="text" name="name"></br>
+Age: <input type="text" name="age"></br>
+Gender: Male <input type="radio" name="gender" value="Male"> Female<input type="radio" name="gender" value="Female"></br>
+Short Bio: </br> <textarea rows="4" cols="32" name="bio"></textarea></br>
+Major: <select name="major">
+			<option value="Media and Information">Media and Information</option>
+			<option value="Computer Science">Computer Science</option>
+			<option value="Basket Weaving">Basket Weaving</option>
+			<option value="Communications">Communnications</option>
+			<option value="Art and Graphic Design">Art and Graphic Design</option>
+		</select></br>
+<!--works--> <input type="hidden" value="true" name="works">
+<!--submit--><input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<link rel="stylesheet" type="text/css" href="expanderStyles.css" />
+<script>
+$( document ).ready(function() {
+      $('.contentItem').hide();
+$('.head').click(function(e){
+        e.preventDefault();
+        $(this).closest(".linkParent").next('.contentItem').slideToggle(); 
+		});
+});
+function expandAll(){
+	$('.contentItem').each(function(i, obj) {
+				if($(obj).is(":hidden"))
+					{
+						$(obj).slideToggle();
+					}
+			});
+}
+
+function collapseAll(){
+	$('.contentItem').each(function(i, obj) {
+		
+ 			if($(obj).is(":visible"))
+				{
+    				$(obj).slideToggle();
+				}
+		});
+}
+</script>
+
+</head>
+<body>
+<div class="expandButtonContainer"><a class="expanderButton" onclick="expandAll()" >Expand All</a></div>
+<div class="expandButtonContainer"><a class="expanderButton" onclick="collapseAll()" >Collapse All</a></div>
+<div class="linkParent">
+<a class="head" href="placeholder">Option 1</a>
+</div>
+<div class="contentItem">
+<p>this is some test text wahooo!</p>
+</div>
+<div class="linkParent">
+<a class="head" href="placeholder">Option 2</a>
+</div>
+<div class="contentItem">
+<p>this is some test text wahooo!</p>
+</div>
+<div class="linkParent">
+<a class="head" href="placeholder">Option 3</a>
+</div>
+<div class="inactive contentItem">
+<p>this is some test text wahooo!</p>
+</div>
+<div class="linkParent">
+<a class="head" href="placeholder">Option 4</a>
+</div>
+<div class="contentItem">
+<p>this is some test text wahooo!</p>
+</div>
+
+</body>
+</html>
